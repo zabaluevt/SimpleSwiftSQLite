@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import SQLite
+import SQLite3
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        DataBase.shared.creteTable()
+        DataBase.shared.insert()
+        DataBase.shared.getEntities()
+        DataBase.shared.quaryAll()
+        
     }
-
 
 }
 
